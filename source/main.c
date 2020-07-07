@@ -20,6 +20,20 @@ void openMobilePage()
     }
 }
 
+void openDesktopPage()
+{
+    Result res;
+    WebCommonConfig mobileConfig;
+
+    res = webPageCreate(&mobileConfig, "https://twitch.tv");
+
+    if(R_SUCCEEDED(res)) {
+        res = webConfigShow(&mobileConfig, NULL);
+    } else {
+        printf("Failed while making WebCommonConfig object.");
+    }
+}
+
 // Main program entrypoint
 int main(int argc, char* argv[])
 {
@@ -27,7 +41,7 @@ int main(int argc, char* argv[])
 
     printf("You shouldn't see this text. Press '+' to exit.\n");
 
-    openMobilePage();
+    openDesktopPage();
 
     // Main loop
     while (appletMainLoop())
@@ -43,7 +57,7 @@ int main(int argc, char* argv[])
             break; // break in order to return to hbmenu
 
         if(appletGetAppletType() == AppletType_Application){
-            openMobilePage();
+            openDesktopPage();
         }
 
         // Update the console, sending a new frame to the display
