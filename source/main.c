@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
     consoleInit(NULL);
 
     printf("You shouldn't see this text. Press '+' to exit.\n");
-    printf(CONSOLE_RESET "SwitchTV - butforme");
+    printf(CONSOLE_RESET "SwitchTV - butforme\n");
     printf(CONSOLE_GREEN "Press X to start\n");
     
     openPage();
