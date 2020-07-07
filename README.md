@@ -1,5 +1,6 @@
 # SwitchTV
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/butforme/SwitchTV?include_prereleases&style=flat-square) ![GitHub All Releases](https://img.shields.io/github/downloads/butforme/SwitchTV/total?style=flat-square)
+Twitch on the Nintendo Switch with HomeBrew
 
 ## Installation
 
