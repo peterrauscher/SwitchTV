@@ -1,3 +1,4 @@
 *.nro
 *.elf
+*.nacp
 .vscode/
