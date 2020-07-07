@@ -6,20 +6,6 @@
 // Include the main libnx system header, for Switch development
 #include <switch.h>
 
-void openMobilePage()
-{
-    Result res;
-    WebCommonConfig mobileConfig;
-
-    res = webPageCreate(&mobileConfig, "https://m.twitch.tv");
-
-    if(R_SUCCEEDED(res)) {
-        res = webConfigShow(&mobileConfig, NULL);
-    } else {
-        printf("Failed while making WebCommonConfig object.");
-    }
-}
-
 void openDesktopPage()
 {
     Result res;
@@ -56,6 +42,8 @@ int main(int argc, char* argv[])
         if (kDown & KEY_PLUS)
             break; // break in order to return to hbmenu
 
+
+        //Only open if not running in applet/album mode
         if(appletGetAppletType() == AppletType_Application){
             openDesktopPage();
         }
