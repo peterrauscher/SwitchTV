@@ -6,15 +6,20 @@
 // Include the main libnx system header, for Switch development
 #include <switch.h>
 
-void openDesktopPage()
+void openPage()
 {
     Result res;
-    WebCommonConfig mobileConfig;
+    WebCommonConfig cfg;
 
-    res = webPageCreate(&mobileConfig, "https://twitch.tv");
+    res = webPageCreate(&cfg, "http://m.twitch.tv");
 
     if(R_SUCCEEDED(res)) {
-        res = webConfigShow(&mobileConfig, NULL);
+        res = webConfigSetWhitelist(&cfg, "^http*");
+        if(R_SUCCEEDED(res)){
+            res = webConfigShow(&cfg, NULL);
+        } else {
+            printf("Something went wrong.");
+        }
     } else {
         printf("Failed while making WebCommonConfig object.");
     }
@@ -26,8 +31,10 @@ int main(int argc, char* argv[])
     consoleInit(NULL);
 
     printf("You shouldn't see this text. Press '+' to exit.\n");
-
-    openDesktopPage();
+    printf(CONSOLE_RESET "SwitchTV - butforme");
+    printf(CONSOLE_GREEN "Press X to start\n");
+    
+    openPage();
 
     // Main loop
     while (appletMainLoop())
@@ -42,12 +49,16 @@ int main(int argc, char* argv[])
         if (kDown & KEY_PLUS)
             break; // break in order to return to hbmenu
 
-
-        //Only open if not running in applet/album mode
-        if(appletGetAppletType() == AppletType_Application){
-            openDesktopPage();
+        if (kDown & KEY_X)
+        {
+            //Only open if not running in applet/album mode
+            if(appletGetAppletType() == AppletType_Application){
+                openPage();
+            } else {
+                printf(CONSOLE_RED "Refusing to launch. Do not run SwitchTV in album or applet mode.\n");
+            }
         }
-
+        
         // Update the console, sending a new frame to the display
         consoleUpdate(NULL);
     }
