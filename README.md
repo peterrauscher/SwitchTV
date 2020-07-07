@@ -1,8 +1,6 @@
 # SwitchTV
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/butforme/SwitchTV?style=flat-square) ![GitHub All Releases](https://img.shields.io/github/downloads/butforme/SwitchTV/total?style=flat-square)
 
-![](https://github.com/butforme/SwitchTV/blob/master/icon.jpg)
-
 ## Installation
 
 1. Download the latest .nro file from the [releases](https://github.com/butforme/SwitchTV/releases) page
