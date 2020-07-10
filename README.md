@@ -33,3 +33,10 @@ Feel free to contribute ideas and/or point out bugs on the Issues page, and I wi
 
 ### Video Playback
 ![](https://i.imgur.com/OWHrgtn.jpg)
+
+## License
+This project is licensed under the GNU General Public License v3.0. See LICENSE.md for details.
+
+## Thanks
+All the work done by [devkitPro]https://devkitpro.org/
+and the team at [switchbrew]https://github.com/switchbrew for the [libnx]https://github.com/switchbrew/libnx libraries
