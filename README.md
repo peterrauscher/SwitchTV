@@ -1,7 +1,11 @@
 # SwitchTV
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/butforme/SwitchTV?include_prereleases&style=flat-square) ![GitHub All Releases](https://img.shields.io/github/downloads/butforme/SwitchTV/total?style=flat-square)
 
-Twitch client for the Nintendo Switch
+---
+**NOTE**
+THIS PROJECT IS NOT ACTIVELY MAINTAINED ANYMORE. I WILL UNARCHIVE SHOULD I EVER FIND THE TIME TO FIX IT. THIS WILL NOT WORK ON CURRENT VERSIONS OF ATMOSPHERE.
+---
+
+SwitchTV was a twitch client for homebrewed Nintendo Switches.
 
 ## Installation
 
